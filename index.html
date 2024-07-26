@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Questionário Industrial</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login Container -->
+        <div id="loginContainer">
+            <h2 id="entrar">Login</h2>
+            <form id="loginForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" class="industrial-input">
+                <label for="matricula">Matrícula:</label>
+                <input type="password" id="matricula" class="industrial-input">
+                <label>
+                    <input type="checkbox" id="showMatricula"> Mostrar matrícula
+                </label>
+                <div class="actions">
+                    <button type="submit" id="botlog" class="industrial-button">Entrar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Turno and Series Container -->
+        <div id="turnoSeriesContainer" style="display: none;">
+            <div class="linha">
+                <h2 id="userGreeting"></h2>
+                <button id="exibirHistoricosBtn" class="industrial-button actions">Exibir Históricos</button>
+            </div>
+            <form id="turnoSeriesForm">
+                <label for="turno">Selecione o Turno:</label>
+                <select id="turno" class="industrial-select">
+                    <option value="Turno A">Turno A</option>
+                    <option value="Turno B">Turno B</option>
+                    <option value="Turno C">Turno C</option>
+                </select>
+                <label for="series">Número de Série:</label>
+                <input type="text" id="series" readonly>
+                <button type="button" id="openScannerBtn" class="industrial-button">Abrir Scanner</button>
+                <div id="barcodeScanner" style="display: none;">
+                    <video id="barcodeVideo" width="300" height="300" style="background: #000;"></video>
+                    <button id="closeScannerBtn" class="industrial-button" style="display: none;">Fechar Scanner</button>
+                </div>
+                <div class="actions">
+                    <button type="submit" id="iniciar" class="industrial-button">Iniciar Questionário</button>
+                </div>
+            </form>
+            <div id="seriesRespondidosContainer" style="display: none;">
+                <h2>Números de Série Respondidos</h2>
+                <ul id="seriesRespondidosList"></ul>
+            </div>
+            <div class="actions">
+                <button id="finalizarBtn" class="industrial-button">Finalizar</button>
+            </div>
+        </div>
+
+        <!-- Questionario Container -->
+        <div id="questionarioContainer" style="display: none;"></div>
+
+        <!-- Resultados Container -->
+        <div id="resultadosContainer" style="display: none;">
+            <h2>Resultados Finais</h2>
+            <div id="resultadosList"></div>
+            <div class="actions">
+                <button id="backToTurnoBtn" class="industrial-button">Voltar</button>
+            </div>
+        </div>
+
+        <!-- Historico Container -->
+        <div id="historicoContainer" style="display: none;">
+            <h2>Histórico de Questionários</h2>
+            <ul id="historicoList"></ul>
+            <div class="actions">
+                <button id="apagarSelecionadosBtn" class="industrial-button" style="display: none;">Apagar
+                    Selecionados</button>
+                <button id="apagarHistoricoBtn" class="industrial-button" style="display: none;">Apagar Todo o
+                    Histórico</button>
+                <button id="backToTurnoBtn2" class="industrial-button">Voltar</button>
+            </div>
+        </div>
+
+        <!-- Historico Detail Container -->
+        <div id="historicoDetailContainer" style="display: none;">
+            <h2>Detalhes do Histórico</h2>
+            <div id="historicoDetailContent"></div>
+            <div class="actions">
+                <button id="backToHistoricoBtn" class="industrial-button">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

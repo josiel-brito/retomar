@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#barcodeScanner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#barcodeVideo {
+    width: 300px;
+    height: 300px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#closeScannerBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.edit-button{
+    border: 10px;
+    padding: 3px;
+    line-height: 5px;
+    margin: 3px;
+    font-size: 7px
+    
+  }
+  
+  #entrar{
+    text-align: center;
+  }
+  
+  #botlog{
+    margin: 10px 135px 0px 0px
+  }
+  
+  .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+  }
+  
+  h2 {
+      margin-top: 0;
+      color: #007BFF;
+  }
+  
+  .linha {
+   display: flex ;
+  }
+  
+  #exibirHistoricosBtn {
+    font-size: 16px;
+    margin: 0px 0px 20px 95px;
+    padding: 13px;
+    line-height: 8px
+  }
+  
+  #iniciar{
+      margin: 10px 174px 0px 0px
+  }
+  
+  #finalizarBtn{
+       margin: 0px 0px 0px 95px
+  }
+  
+  label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  select,
+  textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
+  
+  textarea {
+      height: 100px;
+  }
+  
+  .industrial-input,
+  .industrial-select,
+  .industrial-textarea {
+      font-size: 16px;
+  }
+  
+  .actions{
+    text-align: right;
+  }
+  
+  .industrial-button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-left: 10px;
+  }
+  
+  .industrial-button:hover {
+      background-color: #0056b3;
+  }
+  
+  #historicoList {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  #historicoList li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+  }
+  
+  #historicoList li:hover {
+      background-color: #f1f1f1;
+  }
+  
+  .serial-number {
+      background-color: #555;
+      color: #fff;
+      padding: 10px;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+  
+  .response-row {
+      display: grid;
+      grid-template-columns: 70% 10% 10% 10%;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  .response-question {
+      padding: 10px;
+      background-color: #fff;
+  }
+  
+  .response-good,
+  .response-alert,
+  .response-critical {
+      padding: 10px;
+      text-align: center;
+      margin: auto;
+      vertical-align: center
+      
+  }
+  
+  .response-good {
+      background-color: #d4edda;
+  }
+  
+  .response-alert {
+      background-color: #fff3cd;
+  }
+  
+  .response-critical {
+      background-color: #f8d7da;
+  }
+  
+  .response-problem {
+      padding: 10px;
+      background-color: #f4f4f4;
+      margin: 0;
+  }
+  
+  .response-row:nth-child(odd) .response-question {
+      background-color: #f9f9f9;
+  }
+  
+  .response-row:nth-child(odd) .response-problem {
+      background-color: #ebebeb;
+  }
+  
+  .txt2{
+      margin-top: 15px;
+  }
